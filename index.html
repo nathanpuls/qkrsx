@@ -10,122 +10,139 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 
-    <style>
-        /* Reset and Base Styling */
-        * {
-            box-sizing: border-box;
-        }
+   <style>
+    /* Reset and Base Styling */
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            background-color: white;
-            color: #333;
-            padding-top: 5%;
-        }
+    :root {
+        --main-color: #FDC95E;
+        --main-hover-color: #e0a636; /* Adjusted hover color */
+        --text-color: #333;
+        --background-color: white;
+    }
 
-        a {
-            color: #ff914d;
-        }
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        padding-top: 5%;
+    }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #ff914d;
-        }
+    a {
+        color: var(--main-color);
+    }
 
-        .search-container {
-            text-align: center;
-            width: 100%;
-            max-width: 500px;
-            padding: 20px;
-        }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: var(--text-color);
+    }
 
-        .search-input-wrapper {
-            position: relative;
-            width: 100%;
-        }
+    .search-container {
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+    }
 
-        #searchInput {
-            width: 100%;
-            padding: 12px 35px 12px 15px;
-            font-size: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 25px;
-            outline: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
+    .search-input-wrapper {
+        position: relative;
+        width: 100%;
+    }
 
-        #searchInput:focus {
-            border-color: #ff914d;
-            box-shadow: 0 4px 10px rgba(255, 145, 77, 0.2);
-        }
+    #searchInput {
+        width: 100%;
+        padding: 12px 35px 12px 15px;
+        font-size: 1rem;
+        border: 2px solid #ddd;
+        border-radius: 25px;
+        outline: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
 
-        .clear-icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            color: #757575;
-            cursor: pointer;
-            outline: none;
-            display: none;
-            padding: 0;
-        }
+    #searchInput:focus {
+        border-color: var(--main-color);
+        box-shadow: 0 4px 10px rgba(251, 195, 68, 0.2);
+    }
 
-        .clear-icon:hover {
-            color: black;
-        }
+    .clear-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        color: #757575;
+        cursor: pointer;
+        outline: none;
+        display: none;
+        padding: 0;
+    }
 
-        .description {
-            margin-top: 15px;
-            font-size: 0.8rem;
-            color: #666;
-        }
+    .clear-icon:hover {
+        color: black;
+    }
 
-        #generatedLink {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
+    .description {
+        margin-top: 15px;
+        font-size: 0.8rem;
+        color: #666;
+    }
 
-        .copy-button {
-            background-color: #ff914d;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 10px auto 0;
-            display: block;
-        }
+    #generatedLink {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
 
-        .copy-button:hover {
-            background-color: #ff7a2e;
-        }
+    .copy-button {
+        background-color: var(--main-color);
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 10px auto 0;
+        display: block;
+    }
 
-        .footer {
-            font-size: 12px;
-            color: #757575;
-            margin-top: auto;
-            padding: 10px 0;
-            text-align: center;
-        }
-    </style>
+    .copy-button:hover {
+        background-color: var(--main-hover-color);
+    }
+
+    .footer {
+        font-size: 12px;
+        color: #757575;
+        margin-top: auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+     .logo {
+    width: auto; /* Maintain aspect ratio */
+    height: 1.5em; /* Matches text height */
+    vertical-align: middle; /* Aligns image with text */
+    margin-right: 0em; /* Spacing between image and text */
+}
+
+</style>
+
 </head>
 <body>
     <div class="search-container">
-        <h1>qk.rs</h1>
+        <h1>
+    <img src="https://x.qk.rs/apple-touch-icon.png" alt="Logo" class="logo"> qk.rs
+</h1>
       
         <div class="search-input-wrapper">
             <input type="text" id="searchInput" placeholder="" required autofocus>
